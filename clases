@@ -1,0 +1,86 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+
+/**
+ *
+ * @author David
+ */
+public class clases {
+    public clases(){
+
+}
+     public int cedula;
+    public String nombre;
+    public double promedio_acumulado;
+    public int creditos_cursados;
+    public double promedio_semestre;
+    public int creditos_vistos;
+
+    public int getCreditos_vistos() {
+        return creditos_vistos;
+    }
+
+    public void insertar(int cedula,String nombre,double promedio_acumulado,int creditos_cursados, double promedio_semestre,int creditos_vistos){
+    this.cedula = cedula;
+    this.promedio_acumulado = promedio_acumulado;
+    this.creditos_cursados = creditos_cursados;
+    this.promedio_semestre = promedio_semestre;
+    this.creditos_vistos = creditos_vistos;
+    this.promedio_semestre = promedio_semestre;
+   
+    }
+    public double getPromedio_semestre() {
+        return promedio_semestre;
+    }
+
+   
+    public double nuevo_promedio;
+
+    public double getNuevo_promedio() {
+        return nuevo_promedio;
+    }
+
+    public void setNuevo_promedio(double nuevo_promedio) {
+        this.nuevo_promedio = nuevo_promedio;
+    }
+    public int getCedula() {
+        return cedula;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPromedio_acumulado() {
+        return promedio_acumulado;
+    }
+
+    public int getCreditos_cursados() {
+        return creditos_cursados;
+    }
+    
+  
+
+    
+    public void calcularPromedio(){
+       double n=0;
+       n=( promedio_acumulado * creditos_vistos + promedio_semestre * creditos_cursados )/(creditos_vistos+creditos_cursados);
+       this.nuevo_promedio = n;
+    }
+    
+
+   /*
+    
+  Nuevoprom = (promedio acumulado * créditosvistos + promedio_semestre*créditos_semestre)/(créditosvistos+créditos_semestre) 
+    
+     public String nombre;
+    public double promedio_acumulado;
+    public int creditos_cursados;
+    public double promedio_semestre;
+    public int creditos_vistos;
+    */
+}
