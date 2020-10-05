@@ -1,0 +1,99 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package main;
+import java.util.Scanner;
+/**
+ *
+ * @author David
+ */
+public class inicio {
+    public static void main(String[] args) {
+            int cedula;
+        String nombre = null;
+        double promedio_acumulado = 0.0;
+        int creditos_cursados = 0;
+        int opc =0;
+        int creditos_vistos;
+        double promedio_semestre=0.0;
+        double mejor=0;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese la cantidad de estudiantes");
+        opc =entrada.nextInt();
+        
+        
+         clases A[][] = new clases[opc][6];
+         
+              for (int i = 0; i < opc; i++) {
+            for (int j = 0; j < 6; j++) {
+                System.out.println("Ingrese la cedula");
+                
+                cedula = entrada.nextInt();
+          
+                
+                
+                
+                System.out.println("Ingrese el nombre");
+                nombre = entrada.next();
+                
+                System.out.println("Ingrese el promedio acumulado");
+                
+                promedio_acumulado = entrada.nextDouble();
+                
+                System.out.println("Ingrese los créditos cursados");
+                
+                creditos_cursados = entrada.nextInt();
+                System.out.println("Creditos Vistos");
+                creditos_vistos = entrada.nextInt();
+                System.out.println("Promedio semestre");
+                promedio_semestre = entrada.nextDouble();
+              /*int  cedula,String nombre,double promedio_acumulado,int creditos_cursados, double promedio_semestre,int creditos_vistos*/
+              A[i][j].insertar(cedula, nombre, promedio_acumulado, creditos_cursados, promedio_semestre, creditos_vistos);
+                               
+            }
+
+        }
+              
+              for(int i=0;i<opc;i++){
+                  for(int j=0;j<6;j++){
+                   if(   A[i][j].getNuevo_promedio()>4){
+                       System.out.println("Alumno con promedio mayor a 4 "+A[i][j].getNombre());
+                       
+                       
+                   }
+                  }
+                  
+              }
+              
+             for(int i=0;i<opc;i++){
+                  for(int j=0;j<6;j++){
+                   if(   A[i][j].getNuevo_promedio()>mejor){
+                       mejor= A[i][j].getNuevo_promedio();
+                      
+                       
+                       
+                   }
+                  }
+                
+              }
+             
+              for(int i=0;i<opc;i++){
+                  for(int j=0;j<6;j++){
+                   if(A[i][j].getNuevo_promedio() == mejor){
+                       System.out.println("Mejor Alumno de todos:");
+                       System.out.println("Nombre"+A[i][j].getNombre());
+                         System.out.println("Cedula"+A[i][j].getCedula());
+                         System.out.println("Promedio que tiene"+A[i][j].getNuevo_promedio());
+                       
+                       
+                   }
+                  }
+              
+              
+        
+    }
+   
+    }
+}
